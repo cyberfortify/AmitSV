@@ -252,6 +252,11 @@ p { color: var(--text-secondary); }
     color: #1a1a1a;
 }
 
+/* Close Button - Hidden by default on desktop */
+.nav-close {
+    display: none;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -1173,12 +1178,14 @@ p { color: var(--text-secondary); }
         height: 100vh;
         background: linear-gradient(180deg, #ffffff 0%, #f5f9e6 100%);
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 5rem;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
         transition: var(--transition);
         border-left: 3px solid var(--accent-primary);
         box-shadow: -10px 0 30px rgba(204, 255, 51, 0.2);
+        z-index: 999;
     }
 
     .nav-links.active {
