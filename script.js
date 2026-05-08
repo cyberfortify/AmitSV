@@ -8,6 +8,7 @@ const contactForm = document.getElementById('contactForm');
 const formFeedback = document.getElementById('formFeedback');
 const allLinks = document.querySelectorAll('a[href^="#"]');
 const themeToggle = document.getElementById('themeToggle');
+const navClose = document.getElementById('navClose');
 
 // =============================================
 // Theme Toggle - Light/Dark Mode
@@ -57,6 +58,14 @@ allLinks.forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
+// Close mobile menu when clicking close button
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+}
 
 // =============================================
 // Smooth Scroll

@@ -1200,6 +1200,35 @@ p { color: var(--text-secondary); }
         display: none;
     }
 
+    /* Close Button in Mobile Nav */
+    .nav-close {
+        display: none;
+    }
+
+    .nav-links.active .nav-close {
+        display: flex;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: var(--accent-primary);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 2px 2px 0px #1a1a1a;
+    }
+
+    .nav-links.active .nav-close svg {
+        color: #1a1a1a;
+    }
+
+    .nav-links.active .nav-close:hover {
+        transform: scale(1.1);
+    }
+
     .hero {
         padding: 7rem 1.5rem 4rem;
     }
@@ -1422,6 +1451,15 @@ p { color: var(--text-secondary); }
     }
 
     [data-theme="dark"] .nav-links a:hover {
+        color: #1a1a1a;
+    }
+
+    [data-theme="dark"] .nav-close {
+        background: var(--accent-primary);
+        box-shadow: 2px 2px 0px var(--text-primary);
+    }
+
+    [data-theme="dark"] .nav-close svg {
         color: #1a1a1a;
     }
 
